@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Receita IA — Foto para Receitas</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>🍳 Receita IA</h1>
+      <p>Tire uma foto dos seus ingredientes e receba sugestões de receitas</p>
+    </header>
+
+    <main>
+      <!-- ETAPA 1: Captura da foto -->
+      <section id="etapa-foto" class="card">
+        <h2>1. Foto dos ingredientes</h2>
+        <input type="file" id="input-foto" accept="image/*" capture="environment" hidden />
+        <div id="preview-container" class="hidden">
+          <img id="preview" alt="Preview da foto" />
+        </div>
+        <div class="botoes">
+          <button id="btn-tirar-foto" class="btn-primario">📷 Tirar / escolher foto</button>
+          <button id="btn-identificar" class="btn-primario hidden">🔍 Identificar ingredientes</button>
+        </div>
+        <div id="loading-identificar" class="loading hidden">Analisando imagem...</div>
+      </section>
+
+      <!-- ETAPA 2: Confirmação dos ingredientes -->
+      <section id="etapa-ingredientes" class="card hidden">
+        <h2>2. Confirme os ingredientes</h2>
+        <p class="hint">Edite, remova ou adicione ingredientes antes de buscar receitas.</p>
+        <ul id="lista-ingredientes"></ul>
+        <div class="adicionar-ingrediente">
+          <input type="text" id="input-novo-ingrediente" placeholder="Adicionar ingrediente..." />
+          <button id="btn-adicionar" class="btn-secundario">+ Adicionar</button>
+        </div>
+        <div class="restricoes">
+          <label for="input-restricoes">Restrições ou preferências (opcional):</label>
+          <input type="text" id="input-restricoes" placeholder="ex: vegetariano, sem lactose, receita rápida..." />
+        </div>
+        <button id="btn-buscar-receitas" class="btn-primario">🍽️ Sugerir receitas</button>
+        <div id="loading-receitas" class="loading hidden">Gerando receitas...</div>
+      </section>
+
+      <!-- ETAPA 3: Receitas sugeridas -->
+      <section id="etapa-receitas" class="card hidden">
+        <h2>3. Receitas sugeridas</h2>
+        <div id="lista-receitas"></div>
+        <button id="btn-recomecar" class="btn-secundario">🔄 Começar de novo</button>
+      </section>
+
+      <div id="erro-container" class="erro hidden"></div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
