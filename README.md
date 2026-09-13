@@ -1,4 +1,4 @@
-# Receita IA 🍳 (versão Python/Flask)
+# ReceitAI 
 
 Mesmo projeto de antes, agora com backend em **Python + Flask** em vez de Node.js.
 O frontend (HTML/CSS/JS) continua igual — isso é inevitável, pois é o que roda no navegador.
@@ -67,11 +67,3 @@ pip install gunicorn
 gunicorn -w 4 -b 0.0.0.0:3000 server:app
 ```
 (no Windows, use `waitress` no lugar do gunicorn)
-
-## Próximos passos sugeridos
-
-- **Cache/histórico**: salvar receitas favoritas (SQLite via `sqlite3` nativo do Python, ou SQLAlchemy)
-- **Autenticação**: Flask-Login se for virar produto multiusuário
-- **Ajuste fino de prompt**: testar com fotos reais de despensa/geladeira
-- **Deploy**: Render, Railway ou Fly.io suportam Python/Flask facilmente
-- **Custo**: monitore o uso da API do Gemini — o tier gratuito tem limite de requisições/dia
