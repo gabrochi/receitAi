@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Receita IA — Foto para Receitas</title>
+<title>ReceitAI — Foto para Receitas</title>
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="app">
     <header>
-      <h1>🍳 Receita IA</h1>
+      <h1>ReceitAI</h1>
       <p>Tire uma foto dos seus ingredientes e receba sugestões de receitas</p>
     </header>
 
@@ -22,8 +22,8 @@
           <img id="preview" alt="Preview da foto" />
         </div>
         <div class="botoes">
-          <button id="btn-tirar-foto" class="btn-primario">📷 Tirar / escolher foto</button>
-          <button id="btn-identificar" class="btn-primario hidden">🔍 Identificar ingredientes</button>
+          <button id="btn-tirar-foto" class="btn-primario">Tirar / escolher foto</button>
+          <button id="btn-identificar" class="btn-primario hidden">Identificar ingredientes</button>
         </div>
         <div id="loading-identificar" class="loading hidden">Analisando imagem...</div>
       </section>
@@ -41,7 +41,7 @@
           <label for="input-restricoes">Restrições ou preferências (opcional):</label>
           <input type="text" id="input-restricoes" placeholder="ex: vegetariano, sem lactose, receita rápida..." />
         </div>
-        <button id="btn-buscar-receitas" class="btn-primario">🍽️ Sugerir receitas</button>
+        <button id="btn-buscar-receitas" class="btn-primario">Sugerir receitas</button>
         <div id="loading-receitas" class="loading hidden">Gerando receitas...</div>
       </section>
 
@@ -49,7 +49,7 @@
       <section id="etapa-receitas" class="card hidden">
         <h2>3. Receitas sugeridas</h2>
         <div id="lista-receitas"></div>
-        <button id="btn-recomecar" class="btn-secundario">🔄 Começar de novo</button>
+        <button id="btn-recomecar" class="btn-secundario">Começar de novo</button>
       </section>
 
       <div id="erro-container" class="erro hidden"></div>
