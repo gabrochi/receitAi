@@ -1,7 +1,7 @@
 # ReceitAI 
 
-Mesmo projeto de antes, agora com backend em **Python + Flask** em vez de Node.js.
-O frontend (HTML/CSS/JS) continua igual — isso é inevitável, pois é o que roda no navegador.
+Projeto com backend em **Python + Flask**, o frontend em HTML/CSS/JS
+Link da app: https://receitai-574860027051.southamerica-east1.run.app
 
 ## Como rodar
 
